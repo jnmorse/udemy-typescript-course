@@ -1,3 +1,7 @@
+interface Reportable {
+  summary(): string;
+}
+
 interface Vehicle {
   name: string;
   year: number;
@@ -15,8 +19,8 @@ const oldCivic = {
   }
 };
 
-function printVehicle(vehicle: Vehicle): void {
-  console.log(vehicle.summary());
+function printSummary(report: Reportable): void {
+  console.log(report.summary());
 }
 
-printVehicle(oldCivic);
+printSummary(oldCivic);
