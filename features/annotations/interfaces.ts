@@ -9,7 +9,7 @@ interface Vehicle {
   summary(): string;
 }
 
-const oldCivic = {
+const oldCivic: Vehicle = {
   name: 'civic',
   year: 2000,
   broken: true,
@@ -19,8 +19,18 @@ const oldCivic = {
   }
 };
 
+const drink = {
+  color: 'brown',
+  carbonated: true,
+  sugar: 40,
+  summary() {
+    return `My drink has ${this.sugar} grams of sugar`;
+  }
+};
+
 function printSummary(report: Reportable): void {
   console.log(report.summary());
 }
 
 printSummary(oldCivic);
+printSummary(drink);
