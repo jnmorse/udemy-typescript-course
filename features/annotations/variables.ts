@@ -10,9 +10,9 @@ let myNumbers: number[] = [1, 2, 3];
 
 // Classes
 
-class Car {}
+class Person {}
 
-let car: Car = new Car();
+let joseph: Person = new Person();
 
 // Object literal
 
