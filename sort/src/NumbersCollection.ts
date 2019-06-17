@@ -1,10 +1,10 @@
-import { Sortable } from './Sorter';
+import { Sorter } from './Sorter';
 
-export class NumbersCollection implements Sortable {
-  public data: number[];
-
-  constructor(data: number[]) {
+export class NumbersCollection extends Sorter {
+  constructor(public data: number[]) {
+    super()
     this.data = data
+    this.sort()
   }
 
   public compare(leftIndex: number, rightIndex: number): boolean {
