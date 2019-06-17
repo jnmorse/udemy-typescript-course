@@ -1,0 +1,28 @@
+{
+  "name": "ts-course",
+  "version": "0.0.1",
+  "description": "This repository is to keep the code I write as I progress though a course on Udemy about Typescript.",
+  "keywords": [],
+  "homepage": "https://github.com/jnmorse/udemy-typescript-course#readme",
+  "bugs": {
+    "url": "https://github.com/jnmorse/udemy-typescript-course/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jnmorse/udemy-typescript-course.git"
+  },
+  "license": "MIT",
+  "author": "Joseph Morse <tamed.lionheart@gmail.com>",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "tsc",
+    "start": "concurrently npm:start:*",
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.19.1",
+    "typescript": "^3.5.2"
+  }
+}
