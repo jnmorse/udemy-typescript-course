@@ -6,7 +6,10 @@
   "author": "Joseph Morse <tamed.lionheart@gmail.com>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart:run": "tsc",
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
   },
   "dependencies": {},
   "devDependencies": {
