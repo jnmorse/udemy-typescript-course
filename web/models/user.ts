@@ -8,7 +8,7 @@ type Callback = () => void;
 export class User {
   private events: { [key: string]: Callback[] } = {};
 
-  constructor(private data: UserOptions) { }
+  constructor(private data: UserOptions) {}
 
   get(propName: string): number | string {
     return this.data[propName];
@@ -19,8 +19,14 @@ export class User {
   }
 
   on(eventName: string, callback: Callback): void {
+<<<<<<< HEAD
     const handlers = this.events[eventName] || []
     handlers.push(callback)
     this.events[eventName] = handlers
+=======
+    const handlers = this.events[eventName] || [];
+    handlers.push(callback);
+    this.events[eventName] = handlers;
+>>>>>>> chore(on): alternative decloration
   }
 }
