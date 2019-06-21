@@ -19,10 +19,8 @@ export class User {
   }
 
   on(eventName: string, callback: Callback): void {
-    if (this.events[eventName]) {
-      this.events[eventName].push(callback)
-    } else {
-      this.events[eventName] = [callback]
-    }
+    const handlers = this.events[eventName] || []
+    handlers.push(callback)
+    this.events[eventName] = handlers
   }
 }
