@@ -1,0 +1,18 @@
+{
+  "name": "web-framework",
+  "version": "0.0.1",
+  "description": "framework based on ts course",
+  "main": "index.ts",
+  "dependencies": {},
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "typescript": "^3.5.2"
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joseph Morse <tamed.lionheart@gmail.com>",
+  "license": "MIT"
+}
