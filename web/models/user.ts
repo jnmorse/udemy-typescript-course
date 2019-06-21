@@ -1,7 +1,8 @@
 export interface UserOptions {
-  name: string;
-  age: number;
+  name?: string;
+  age?: number;
 }
+
 export class User {
   constructor(private data: UserOptions) {}
 
