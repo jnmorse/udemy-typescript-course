@@ -9,7 +9,7 @@
     "typescript": "^3.5.2"
   },
   "scripts": {
-    "start": "parcel index.html",
+    "start": "parcel serve index.html --open",
     "build": "parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
