@@ -1,1 +1,5 @@
-console.log('hi there');
+import { User } from "./models/user";
+
+const user = new User({})
+
+user.on('update', () => { })

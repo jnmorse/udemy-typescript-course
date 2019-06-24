@@ -19,14 +19,8 @@ export class User {
   }
 
   on(eventName: string, callback: Callback): void {
-<<<<<<< HEAD
-    const handlers = this.events[eventName] || []
-    handlers.push(callback)
-    this.events[eventName] = handlers
-=======
     const handlers = this.events[eventName] || [];
     handlers.push(callback);
     this.events[eventName] = handlers;
->>>>>>> chore(on): alternative decloration
   }
 }
