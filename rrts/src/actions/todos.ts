@@ -14,7 +14,7 @@ export const fetchTodos = () => {
     const response = await axios.get<Todo[]>(url.toString());
 
     dispatch<FetchTodosAction>({
-      type: ActionTypes.fetchTodos,
+      type: ActionTypes.FetchTodo,
       payload: response.data
     });
   };
@@ -22,7 +22,7 @@ export const fetchTodos = () => {
 
 export const deleteTodo = (id: number): DeleteTodoAction => {
   return {
-    type: ActionTypes.deleteTodo,
+    type: ActionTypes.DeleteTodo,
     payload: id
   };
 };

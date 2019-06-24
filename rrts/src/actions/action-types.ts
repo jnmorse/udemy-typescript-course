@@ -1,6 +1,6 @@
 export enum ActionTypes {
-  fetchTodos,
-  deleteTodo
+  FetchTodo = 'FetchTodo',
+  DeleteTodo = 'DeleteTodo'
 }
 
 export interface Todo {
@@ -11,12 +11,12 @@ export interface Todo {
 }
 
 export interface FetchTodosAction {
-  type: ActionTypes.fetchTodos;
+  type: ActionTypes.FetchTodo;
   payload: Todo[];
 }
 
 export interface DeleteTodoAction {
-  type: ActionTypes.deleteTodo;
+  type: ActionTypes.DeleteTodo;
   payload: number;
 }
 

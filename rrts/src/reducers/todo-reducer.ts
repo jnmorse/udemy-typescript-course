@@ -1,12 +1,12 @@
 import { Todo, ActionTypes, Action } from '../actions';
 
-export function todoReducer(state: Todo[] = [], action: Action) {
+export function todoReducer(state: Todo[] = [], action: Action): Todo[] {
   switch (action.type) {
-    case ActionTypes.fetchTodos: {
+    case ActionTypes.FetchTodo: {
       return action.payload;
     }
 
-    case ActionTypes.deleteTodo: {
+    case ActionTypes.DeleteTodo: {
       return state.filter((todo: Todo) => todo.id !== action.payload);
     }
 

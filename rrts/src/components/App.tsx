@@ -9,9 +9,28 @@ interface AppProps {
   deleteTodo: typeof deleteTodo;
 }
 
-export class _App extends Component<AppProps> {
+interface AppState {
+  fetching: boolean;
+}
+
+export class _App extends Component<AppProps, AppState> {
+  constructor(props: AppProps) {
+    super(props);
+
+    this.state = { fetching: false };
+  }
+
+  componentDidUpdate(prevProps: AppProps, prevState: AppState) {
+    if (prevProps.todos.length < this.props.todos.length) {
+      this.setState({ fetching: false });
+    } else if (prevState.fetching) {
+      this.setState({ fetching: false });
+    }
+  }
+
   onButtonClick = (): void => {
     this.props.fetchTodos();
+    this.setState({ fetching: true });
   };
 
   deleteTodo(index: number): void {
@@ -30,14 +49,15 @@ export class _App extends Component<AppProps> {
     return (
       <div>
         <button onClick={this.onButtonClick}>Fetch</button>
+        {this.state.fetching ? 'Loading' : null}
         {this.renderList()}
       </div>
     );
   }
 }
 
-const mapStateToProps = ({ todos }: StoreState): { todos: Todo[] } => {
-  return { todos };
+const mapStateToProps = (state: StoreState): { todos: Todo[] } => {
+  return { todos: state.todos };
 };
 
 export const App = connect(
