@@ -1,3 +1,39 @@
 {
-  "users": []
+  "users": [
+    {
+      "id": 1,
+      "name": "Fred",
+      "age": 39
+    },
+    {
+      "name": "Joseph",
+      "age": 39,
+      "id": 2
+    },
+    {
+      "name": "Joseph",
+      "age": 39,
+      "id": 3
+    },
+    {
+      "name": "Joseph",
+      "age": 39,
+      "id": 4
+    },
+    {
+      "name": "Joseph",
+      "age": 39,
+      "id": 5
+    },
+    {
+      "name": "Joseph",
+      "age": 39,
+      "id": 6
+    },
+    {
+      "name": "Joseph",
+      "age": 39,
+      "id": 7
+    }
+  ]
 }

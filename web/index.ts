@@ -1,5 +1,3 @@
-import { User } from "./models/user";
+import { User } from './models/user';
 
-const user = new User({})
-
-user.on('update', () => { })
+const user = new User({});
