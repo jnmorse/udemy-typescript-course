@@ -1,3 +1,5 @@
-import { User } from './models/user';
+import { User } from './models/User';
 
-const user = new User({});
+const user: User = new User({ name: 'Joseph', age: 38 });
+
+console.log(user.get('name'));
